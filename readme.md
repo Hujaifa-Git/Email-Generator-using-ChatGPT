@@ -34,4 +34,5 @@ Execute the evaluation.py script to start the evaluation process
 ```bash
 python app.py
 ```
-
+## Demo
+![Demo](Email_Generator_Video.gif)
