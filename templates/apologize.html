@@ -1,0 +1,49 @@
+{% extends 'includes/layout.html' %}
+
+{% block body %}
+<main class="container">
+  <div class="bg-light p-5 rounded mt-5">
+    <h1>Apologize ️</h1>
+    <p class="lead">
+      Generate an email that gives a remainder about a payment
+    </p>
+
+    <h2>Generate a scheduling email by providing the topic and time.Provide clients name invoice and cost of service</h2>
+
+    <form class="" action="/apologize" method="post">
+
+      <div class="mb-3">
+        <label class="form-label">Name</label>
+        <input type="text" class="form-control" name="apologize-name" placeholder="eg. Shajib">
+        <div class="form-text">Enter the name of the person you are apologizing to</div>
+      </div>
+
+      <div class="mb-3">
+        <label class="form-label">Why This Apology</label>
+        <input type="text" class="form-control" name="apologize-why" placeholder="eg. not joining his birthday">
+        <div class="form-text">Enter why you are aplogizing</div>
+      </div>
+
+      <div class="mb-3">
+        <label class="form-label">Reason</label>
+        <input type="text" class="form-control" name="apologize-reason" placeholder="eg. I had a meeting">
+        <div class="form-text">Enter why you did it</div>
+      </div>
+
+      <button type="submit" class="btn btn-primary btn-lg"> Generate</button>
+
+    </form>
+  </div>
+
+
+  <div class="p-3 rounded">
+    <div class="row">
+      <div class="col-lg-12">
+        <h3 class="text-primary">{{prompt}}</h3>
+        <p class="lead">{{openAIAnswer}}</p>
+
+      </div>
+    </div>
+  </div>
+</main>
+{% endblock %}

@@ -1,0 +1,43 @@
+{% extends 'includes/layout.html' %}
+
+{% block body %}
+<main class="container">
+  <div class="bg-light p-5 rounded mt-5">
+    <h1>Decline Invitation</h1>
+    <p class="lead">
+      Decilne an invitation about an event
+    </p>
+
+    <h2>Provide information about declination</h2>
+
+    <form class="" action="/decline-invitation" method="post">
+
+      <div class="mb-3">
+        <label class="form-label">Event Name</label>
+        <input type="text" class="form-control" name="decline-invitation-name" placeholder="eg. Birthday Party">
+        <div class="form-text">Enter event name you are declining.</div>
+      </div>
+
+      <div class="mb-3">
+        <label class="form-label">Reason for Declining</label>
+        <input type="text" class="form-control" name="decline-invitation-reason" placeholder="eg. A meeting">
+        <div class="form-text">Enter event name you are declining.</div>
+      </div>
+
+      <button type="submit" class="btn btn-primary btn-lg"> Generate</button>
+
+    </form>
+  </div>
+
+
+  <div class="p-3 rounded">
+    <div class="row">
+      <div class="col-lg-12">
+        <h3 class="text-primary">{{prompt}}</h3>
+        <p class="lead">{{openAIAnswer}}</p>
+
+      </div>
+    </div>
+  </div>
+</main>
+{% endblock %}

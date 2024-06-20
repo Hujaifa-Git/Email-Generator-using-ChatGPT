@@ -1,0 +1,55 @@
+{% extends 'includes/layout.html' %}
+
+{% block body %}
+<main class="container">
+  <div class="bg-light p-5 rounded mt-5">
+    <h1>Payment Remainder ️</h1>
+    <p class="lead">
+      Generate an email that gives a remainder about a payment.
+    </p>
+
+    <h2>Generate a scheduling email by providing the topic and time.Provide clients name invoice and cost of service</h2>
+
+    <form class="" action="/payment-reminder" method="post">
+
+      <div class="mb-3">
+        <label class="form-label">Customers Name</label>
+        <input type="text" class="form-control" name="payment-reminder-name" placeholder="eg. Shariful">
+        <div class="form-text">Enter the name of your customer.</div>
+      </div>
+
+      <div class="mb-3">
+        <label class="form-label">Your Service</label>
+        <input type="text" class="form-control" name="payment-reminder-service" placeholder="eg. Floor Cleaning">
+        <div class="form-text">Enter the service the customer has taken.</div>
+      </div>
+
+      <div class="mb-3">
+        <label class="form-label">Total Amount</label>
+        <input type="text" class="form-control" name="payment-reminder-amount" placeholder="eg. 5000 taka">
+        <div class="form-text">Enter the name of your customer.</div>
+      </div>
+
+      <div class="mb-3">
+        <label class="form-label">Due Date</label>
+        <input type="text" class="form-control" name="payment-reminder-date" placeholder="eg. 20/12/2023">
+        <div class="form-text">Enter last date for the payment.</div>
+      </div>
+
+      <button type="submit" class="btn btn-primary btn-lg"> Generation</button>
+
+    </form>
+  </div>
+
+
+  <div class="p-3 rounded">
+    <div class="row">
+      <div class="col-lg-12">
+        <h3 class="text-primary">{{prompt}}</h3>
+        <p class="lead">{{openAIAnswer}}</p>
+
+      </div>
+    </div>
+  </div>
+</main>
+{% endblock %}

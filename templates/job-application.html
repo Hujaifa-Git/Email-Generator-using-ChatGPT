@@ -1,0 +1,56 @@
+{% extends 'includes/layout.html' %}
+
+{% block body %}
+<main class="container">
+  <div class="bg-light p-5 rounded mt-5">
+    <h1>Job Application</h1>
+    <p class="lead">
+      Generated a job application
+    </p>
+
+    <h2>Provide the name of position and organization</h2>
+
+    <form class="" action="/job-application" method="post">
+
+      <div class="mb-3">
+        <label class="form-label">Your Name</label>
+        <input type="text" class="form-control" name="job-application-name" placeholder="eg. Abdullah">
+        <div class="form-text">Enter your name.</div>
+      </div>
+
+      <div class="mb-3">
+        <label class="form-label">Position</label>
+        <input type="text" class="form-control" name="job-application-position" placeholder="eg. Web developer">
+        <div class="form-text">Enter the name of the position.</div>
+      </div>
+
+      <div class="mb-3">
+        <label class="form-label">Organization</label>
+        <input type="text" class="form-control" name="job-application-organization" placeholder="eg. Bkash">
+        <div class="form-text">Enter the name of the Organization.</div>
+      </div>
+
+      <div class="mb-3">
+        <label class="form-label">Name (Manager)</label>
+        <input type="text" class="form-control" name="job-application-name2" placeholder="eg. Mr. Shariful">
+        <div class="form-text">Enter the name of hiring manager.</div>
+      </div>
+
+
+      <button type="submit" class="btn btn-primary btn-lg"> Generate</button>
+
+    </form>
+  </div>
+
+
+  <div class="p-3 rounded">
+    <div class="row">
+      <div class="col-lg-12">
+        <h3 class="text-primary">{{prompt}}</h3>
+        <p class="lead">{{openAIAnswer}}</p>
+
+      </div>
+    </div>
+  </div>
+</main>
+{% endblock %}

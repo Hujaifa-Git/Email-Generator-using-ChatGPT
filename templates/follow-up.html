@@ -1,0 +1,67 @@
+{% extends 'includes/layout.html' %}
+
+{% block body %}
+<main class="container">
+  <div class="bg-light p-5 rounded mt-5">
+    <h1>Follow Up ️</h1>
+    <p class="lead">
+      Follow up on a lead or client.
+    </p>
+
+    <h2>Following up on leads or clients is essential for maintaining relationships and fostering growth. Provide your and your client's information and necessary informations</h2>
+
+    <form class="" action="/follow-up" method="post">
+
+      <div class="mb-3">
+        <label class="form-label">Your Name</label>
+        <input type="text" class="form-control" name="follow-up-your-name" placeholder="eg. Ratul">
+        <div class="form-text">Enter your name.</div>
+      </div>
+
+      <div class="mb-3">
+        <label class="form-label">Your Organization</label>
+        <input type="text" class="form-control" name="follow-up-your-organization" placeholder="eg. Google">
+        <div class="form-text">Enter your organization.</div>
+      </div>
+
+      <div class="mb-3">
+        <label class="form-label">Client Name</label>
+        <input type="text" class="form-control" name="follow-up-client-name" placeholder="eg. Rahat">
+        <div class="form-text">Enter your clients name.</div>
+      </div>
+
+      <div class="mb-3">
+        <label class="form-label">Client Organization</label>
+        <input type="text" class="form-control" name="follow-up-client-organization" placeholder="eg. Microsoft">
+        <div class="form-text">Enter clients organization.</div>
+      </div>
+
+      <div class="mb-3">
+        <label class="form-label">Your Service that the client is interested in</label>
+        <input type="text" class="form-control" name="follow-up-your-service" placeholder="eg. AI Services">
+        <div class="form-text">Enter your service that the client is interested in.</div>
+      </div>
+
+      <div class="mb-3">
+        <label class="form-label">Benefits in Your Service</label>
+        <input type="text" class="form-control" name="follow-up-your-service-benefit" placeholder="eg. Less expensive, discount">
+        <div class="form-text">Enter benefits in your service</div>
+      </div>
+
+      <button type="submit" class="btn btn-primary btn-lg"> Generate</button>
+
+    </form>
+  </div>
+
+
+  <div class="p-3 rounded">
+    <div class="row">
+      <div class="col-lg-12">
+        <h3 class="text-primary">{{prompt}}</h3>
+        <p class="lead">{{openAIAnswer}}</p>
+
+      </div>
+    </div>
+  </div>
+</main>
+{% endblock %}

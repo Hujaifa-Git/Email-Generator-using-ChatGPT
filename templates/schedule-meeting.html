@@ -1,0 +1,49 @@
+{% extends 'includes/layout.html' %}
+
+{% block body %}
+<main class="container">
+  <div class="bg-light p-5 rounded mt-5">
+    <h1>Schedule Meeting ️</h1>
+    <p class="lead">
+      Generate an email that schedules a meeting with someone.
+    </p>
+
+    <h2>Enter the details about the meeting</h2>
+
+    <form class="" action="/schedule-meeting" method="post">
+
+      <div class="mb-3">
+        <label class="form-label">Clients Name</label>
+        <input type="text" class="form-control" name="schedule-meeting-name" placeholder="eg. Mr. Rahat">
+        <div class="form-text">Enter the name of the person who you want to schedule the meeting with.</div>
+      </div>
+
+      <div class="mb-3">
+        <label class="form-label">Reason</label>
+        <input type="text" class="form-control" name="schedule-meeting-reason" placeholder="eg. Financial Analysis">
+        <div class="form-text">Enter the reson for meeting.</div>
+      </div>
+
+      <div class="mb-3">
+        <label class="form-label">Reason</label>
+        <input type="text" class="form-control" name="schedule-meeting-time" placeholder="eg. 3:00 PM 5/10/2023">
+        <div class="form-text">Time of meeting in specified format</div>
+      </div>
+
+      <button type="submit" class="btn btn-primary btn-lg"> Generate</button>
+
+    </form>
+  </div>
+
+
+  <div class="p-3 rounded">
+    <div class="row">
+      <div class="col-lg-12">
+        <h3 class="text-primary">{{prompt}}</h3>
+        <p class="lead">{{openAIAnswer}}</p>
+
+      </div>
+    </div>
+  </div>
+</main>
+{% endblock %}

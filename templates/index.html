@@ -1,0 +1,174 @@
+{% extends 'includes/layout.html' %}
+
+{% block body %}
+<main class="container">
+  <div class="bg-light p-5 rounded mt-5">
+    <h1>Generate Emails with OpenAI</h1>
+    <p class="lead">This example was created to generate emails using ChatGPT. it is a web application
+    created in Flask that can be used to generate different types of emails using Artificial Intelligence API from OpenAI.
+    </p>
+    <p class="lead">You can use this email generator to do the following things </p>
+    <ol>
+      <li>Schedule a meeting or call</li>
+      <li>Follow up on a lead or client</li>
+      <li>Request something</li>
+      <li>Provide project updates</li>
+      <li>Summarize a lengthy email</li>
+      <li>Submit an invoice or payment reminder</li>
+      <li>Apologize to a client or customer</li>
+      <li>Ask for a referral or testimonial</li>
+      <li>Decline an invitation</li>
+      <li>Send a job application</li>
+    </ol>
+  </div>
+
+    <div class="p-5 rounded mt-1">
+        <div class="row">
+
+            <!-- One Item Starts Here -->
+            <div class="col-lg-3 mb-3">
+                <div class="card">
+                    <div class="card-header">
+                        Schedule Meeting
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Generate an email that schedules a meeting with someone ️</h5>
+                        <p class="card-text">provide the name, topic and time of the meeting.</p>
+                        <a href="/schedule-meeting" class="btn btn-primary">Get Started</a>
+                    </div>
+                </div>
+            </div>
+            <!-- One Item Ends here -->
+        
+            <div class="col-lg-3 mb-3">
+                <div class="card">
+                    <div class="card-header">
+                        Follow Up
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title"> Follow up on a lead or client ️</h5>
+                        <p class="card-text">Following up on leads or clients is essential for maintaining relationships and fostering growth. Provide your and your client's information and necessary informations</p>
+                        <a href="/follow-up" class="btn btn-primary">Get Started</a>
+                    </div>
+                </div>
+            </div>
+            <!-- One Item Ends here -->
+
+            <div class="col-lg-3 mb-3">
+                <div class="card">
+                    <div class="card-header">
+                        Request something
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title"> Generate an email to request something from someone ️</h5>
+                        <p class="card-text">Provide information about the request.</p>
+                        <a href="/request-something" class="btn btn-primary">Get Started</a>
+                    </div>
+                </div>
+            </div>
+            <!-- One Item Ends here -->
+
+            <div class="col-lg-3 mb-3">
+                <div class="card">
+                    <div class="card-header">
+                        Project Update
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title"> Generate an email about a projects update</h5>
+                        <p class="card-text">providing list of completing tasks.</p>
+                        <a href="/project-update" class="btn btn-primary">Get Started</a>
+                    </div>
+                </div>
+            </div>
+            <!-- One Item Ends here -->
+
+            <div class="col-lg-3 mb-3">
+                <div class="card">
+                    <div class="card-header">
+                        Summarize
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title"> Summarize a lenghty email ️</h5>
+                        <p class="card-text">Provide the email you want to summarize.</p>
+                        <a href="/summarize" class="btn btn-primary">Get Started</a>
+                    </div>
+                </div>
+            </div>
+            <!-- One Item Ends here -->
+
+            <div class="col-lg-3 mb-3">
+                <div class="card">
+                    <div class="card-header">
+                        Payment Remainder
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title"> Generate an email that gives a remainder about a payment ️</h5>
+                        <p class="card-text">Generate a scheduling email by providing the topic and time.Provide clients name invoice and cost of service</p>
+                        <a href="/payment-reminder" class="btn btn-primary">Get Started</a>
+                    </div>
+                </div>
+            </div>
+            <!-- One Item Ends here -->
+
+            <div class="col-lg-3 mb-3">
+                <div class="card">
+                    <div class="card-header">
+                        Apologize
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title"> Apologizing to a client or customer</h5>
+                        <p class="card-text">Provide reason and some offering</p>
+                        <a href="/apologize" class="btn btn-primary">Get Started</a>
+                    </div>
+                </div>
+            </div>
+            <!-- One Item Ends here -->
+
+            <div class="col-lg-3 mb-3">
+                <div class="card">
+                    <div class="card-header">
+                        Refferal
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title"> Ask for a referral or testimonial ️</h5>
+                        <p class="card-text">Compose an email to a satisfied client asking if they would be willing to provide a testimonial for our website or refer us to their contacts</p>
+                        <a href="/refferal" class="btn btn-primary">Get Started</a>
+                    </div>
+                </div>
+            </div>
+            <!-- One Item Ends here -->
+
+            <div class="col-lg-3 mb-3">
+                <div class="card">
+                    <div class="card-header">
+                        Decline Invitation
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title"> Decilne an invitation about an event ️</h5>
+                        <p class="card-text">Provide information about declination.</p>
+                        <a href="/decline-invitation" class="btn btn-primary">Get Started</a>
+                    </div>
+                </div>
+            </div>
+            <!-- One Item Ends here -->
+
+            <div class="col-lg-3 mb-3">
+                <div class="card">
+                    <div class="card-header">
+                        Job Application
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title"> Generated a job application ️</h5>
+                        <p class="card-text">Provide the name of position and organization</p>
+                        <a href="/job-application" class="btn btn-primary">Get Started</a>
+                    </div>
+                </div>
+            </div>
+            <!-- One Item Ends here -->
+        
+            <!-- Repeat the pattern for the other items -->
+        
+        </div>
+    </div>
+</main>
+{% endblock %}

@@ -1,0 +1,37 @@
+{% extends 'includes/layout.html' %}
+
+{% block body %}
+<main class="container">
+  <div class="bg-light p-5 rounded mt-5">
+    <h1>Summarize ️</h1>
+    <p class="lead">
+      Summarize a lenghty email.
+    </p>
+
+    <h2>Provide the email you want to summarize.</h2>
+
+    <form class="" action="/summarize" method="post">
+
+      <div class="mb-3">
+        <label class="form-label">Email</label>
+        <input type="text" class="form-control" name="summarize-mail" >
+        <div class="form-text">Enter the email you want to summarize.</div>
+      </div>
+
+      <button type="submit" class="btn btn-primary btn-lg"> Generation</button>
+
+    </form>
+  </div>
+
+
+  <div class="p-3 rounded">
+    <div class="row">
+      <div class="col-lg-12">
+        <h3 class="text-primary">{{prompt}}</h3>
+        <p class="lead">{{openAIAnswer}}</p>
+
+      </div>
+    </div>
+  </div>
+</main>
+{% endblock %}

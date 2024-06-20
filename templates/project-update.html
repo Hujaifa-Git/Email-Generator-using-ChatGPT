@@ -1,0 +1,49 @@
+{% extends 'includes/layout.html' %}
+
+{% block body %}
+<main class="container">
+  <div class="bg-light p-5 rounded mt-5">
+    <h1>Project Update ️</h1>
+    <p class="lead">
+      Generate an email about a projects update
+    </p>
+
+    <h2>providing list of completing tasks.</h2>
+
+    <form class="" action="/project-update" method="post">
+
+      <div class="mb-3">
+        <label class="form-label">Give Update to</label>
+        <input type="text" class="form-control" name="project-update-name" placeholder="eg. Mr. CEO">
+        <div class="form-text">Enter name for the person who you are reporting to</div>
+      </div>
+
+      <div class="mb-3">
+        <label class="form-label">Project Name</label>
+        <input type="text" class="form-control" name="project-update-project-name" placeholder="Web Development">
+        <div class="form-text">Enter name for the name of the project</div>
+      </div>
+
+      <div class="mb-3">
+        <label class="form-label">Updates</label>
+        <input type="text" class="form-control" name="project-updates" placeholder="eg. Framework done, coding finished, deployment left">
+        <div class="form-text">Enter the updates of the project</div>
+      </div>
+
+      <button type="submit" class="btn btn-primary btn-lg"> Generate</button>
+
+    </form>
+  </div>
+
+
+  <div class="p-3 rounded">
+    <div class="row">
+      <div class="col-lg-12">
+        <h3 class="text-primary">{{prompt}}</h3>
+        <p class="lead">{{openAIAnswer}}</p>
+
+      </div>
+    </div>
+  </div>
+</main>
+{% endblock %}
